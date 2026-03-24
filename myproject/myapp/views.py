@@ -11,8 +11,9 @@ def contact(request):
         email = request.POST.get('email')
         subject = request.POST.get('subject')
         message = request.POST.get('message')
+        attachment = request.FILES.get('attachment')
 
-        contact_entry = Contact(name=name, email=email, subject=subject, message=message)
+        contact_entry = Contact(name=name, email=email, subject=subject, message=message, attachment=attachment)
         contact_entry.save()
         messages.success(request, 'Your message has been sent successfully!')
 

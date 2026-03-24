@@ -1,4 +1,30 @@
+# Python virtual environment
 env/
-_pycache_/
-*.pyc
+venv/
+.venv/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Django
 db.sqlite3
+*.log
+
+# VS Code settings
+.vscode/
+
+# PyCharm
+.idea/
+
+Lib/
+Scripts/
+Include/
+pyvenv.cfg

@@ -17,7 +17,7 @@
     ></script>
 </head>
 <body>
-    <form id="contact-form"  method="POST">
+    <form id="contact-form" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
   <h2>Contact us</h2>
 
@@ -54,6 +54,12 @@
   <div data-mdb-input-init class="form-outline mb-4">
     <textarea class="form-control" id="message" name="message" rows="4"></textarea>
     <label class="form-label" for="message">Message</label>
+  </div>
+
+  <!-- Attachment input -->
+  <div class="mb-4">
+    <label class="form-label" for="attachment">Attachment (optional)</label>
+    <input class="form-control" type="file" id="attachment" name="attachment" />
   </div>
 
   <!-- Submit button -->
